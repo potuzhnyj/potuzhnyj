@@ -5,7 +5,6 @@
 
 
   <p>
-    <a href="https://github.com/potuzhnyj">GitHub</a> ·
     <a href="https://potuzhnyj.github.io/parcelmap/">parcelmap project</a> ·
     <a href="https://potuzhnyj.github.io/investai/">investai project</a>
   </p>
