@@ -6,7 +6,7 @@
 
   <p>
     <a href="https://github.com/potuzhnyj">GitHub</a> ·
-    <a href="https://potuzhnyj.github.io/parcelmap/">parcelmap project</a>
+    <a href="https://potuzhnyj.github.io/parcelmap/">parcelmap project</a> ·
     <a href="https://potuzhnyj.github.io/investai/">investai project</a>
   </p>
 </div>
@@ -27,11 +27,6 @@ The project includes parcel selection, highlighted boundaries, cadastral details
 ![Git](https://img.shields.io/badge/Git-f05032?style=flat-square&logo=git&logoColor=ffffff)
 
 ## GitHub activity
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=potuzhnyj&show_icons=true&hide_border=true&theme=transparent" height="165" alt="GitHub statistics" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=potuzhnyj&layout=compact&hide_border=true&theme=transparent" height="165" alt="Top languages" />
-</div>
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=potuzhnyj&hide_border=true&theme=transparent" alt="GitHub contribution streak" />
