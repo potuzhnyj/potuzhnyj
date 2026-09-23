@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A small portfolio of projects." />
+    <title>potuzhnyj</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #090909;
+        --surface: #111111;
+        --line: #2a2a2a;
+        --muted: #f9f6f3;
+        --text: #f2f2f2a6;
+        --accent: #f4c542;
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        width: min(var(--max), calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 34px 0;
+      }
+
+      main {
+        padding-bottom: 110px;
+      }
+      .intro {
+        min-height: 67vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 78px 0 90px;
+        position: relative;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(3.8rem, 9vw, 8.5rem);
+        line-height: 0.93;
+        letter-spacing: -0.07em;
+        font-weight: 700;
+      }
+      .intro p {
+        max-width: 700px;
+        margin: 34px 0 0;
+        color: #d0d0d0;
+        font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+        line-height: 1.4;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+        margin-top: 30px;
+      }
+      .social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 42px;
+        height: 42px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .social a:hover,
+      .social a:focus-visible {
+        color: var(--bg);
+        border-color: var(--accent);
+        background: var(--accent);
+      }
+
+      .sectionHead {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+      h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        letter-spacing: -0.05em;
+      }
+      .sectionHead p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        padding-top: 18px;
+      }
+      .card {
+        min-height: 285px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 26px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: #555;
+      }
+      .card.featured {
+        grid-column: span 2;
+        min-height: 330px;
+        background: linear-gradient(135deg, #171717 0%, #101010 65%);
+      }
+      .cardTop {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .number {
+        color: var(--accent);
+        font-size: 13px;
+        letter-spacing: 0.08em;
+      }
+      .card h3 {
+        margin: 12px 0 9px;
+        font-size: clamp(1.8rem, 4vw, 3.1rem);
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+      .card p {
+        max-width: 570px;
+        margin: 0;
+        color: #bdbdbd;
+        font-size: 16px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 24px;
+      }
+      .tag {
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .tag + .tag::before {
+        content: "·";
+        margin-right: 8px;
+        color: #555;
+      }
+      .cardLinks {
+        display: flex;
+        gap: 18px;
+        margin-top: 30px;
+      }
+      .cardLinks a {
+        color: var(--text);
+        text-decoration: underline;
+        text-decoration-color: #555;
+        text-underline-offset: 4px;
+        font-size: 14px;
+      }
+      .cardLinks a:hover,
+      .cardLinks a:focus-visible {
+        color: var(--accent);
+        text-decoration-color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .wrap {
+          width: min(var(--max), calc(100% - 32px));
+        }
+        header {
+          padding: 22px 0;
+        }
+        .intro {
+          min-height: auto;
+          padding: 80px 0 100px;
+        }
+        .projects {
+          grid-template-columns: 1fr;
+        }
+        .card.featured {
+          grid-column: auto;
+        }
+        .sectionHead {
+          display: block;
+        }
+        .sectionHead p {
+          margin-top: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="top">
+      <section class="wrap intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">Hello, I'm Ivan.</h1>
+        <p>I build stuff, yeah...</p>
+        <div style="display: flex; gap: 15px">
+          <div class="social" aria-label="Social links">
+            <a
+              href="https://github.com/potuzhnyj"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+          </div>
+          <div class="social" aria-label="Social links">
+            <a
+              href="https://linkedin.com/in/ivanmosak/"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap" id="projects" aria-labelledby="projects-title">
+        <div class="sectionHead">
+          <h2 id="projects-title">Selected projects</h2>
+        </div>
+        <div class="projects">
+          <article class="card featured">
+            <div>
+              <div class="cardTop">
+                <span class="number">01 / MAP</span
+                ><span class="number">SEP 2026</span>
+              </div>
+              <h3>parcelmap</h3>
+              <p>
+                An interactive parcel map for the Jičín area. Click a parcel to
+                inspect its number, registered area and cadastral reference.
+              </p>
+              <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Leaflet API</span>
+                <span class="tag">GeoJSON</span>
+              </div>
+            </div>
+            <div class="cardLinks">
+              <a
+                href="https://potuzhnyj.github.io/parcelmap/"
+                target="_blank"
+                rel="noreferrer"
+                >Live demo ↗</a
+              >
+              <a
+                href="https://github.com/potuzhnyj/parcelmap"
+                target="_blank"
+                rel="noreferrer"
+                >Source ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="card">
+            <div>
+              <div class="cardTop">
+                <span class="number">02 / FINANCE</span
+                ><span class="number">MAY 2026</span>
+              </div>
+              <h3>InvestAI</h3>
+              <p>
+                A browser-based investing assistant for stock analysis,
+                portfolio review and market research.
+              </p>
+              <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Gemini API</span>
+              </div>
+            </div>
+            <div class="cardLinks">
+              <a
+                href="https://potuzhnyj.github.io/InvestAI/"
+                target="_blank"
+                rel="noreferrer"
+                >Live demo ↗</a
+              >
+              <a
+                href="https://github.com/potuzhnyj/InvestAI"
+                target="_blank"
+                rel="noreferrer"
+                >Source ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="card">
+            <div>
+              <div class="cardTop">
+                <span class="number">03 / AUTOMATION</span
+                ><span class="number">JAN 2026</span>
+              </div>
+              <h3>Gmail Coupon Grabber</h3>
+              <p>
+                A Node.js utility that scans promo emails, follows links and
+                creates a clean HTML report.
+              </p>
+              <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JAVASCRIPT</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Gmail API</span>
+                <span class="tag">imapflow</span>
+                <span class="tag">cheerio</span>
+              </div>
+            </div>
+            <div class="cardLinks">
+              <a
+                href="https://github.com/potuzhnyj/Gmail-Coupon-Grabber"
+                target="_blank"
+                rel="noreferrer"
+                >Source ↗</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
