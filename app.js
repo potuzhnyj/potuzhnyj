@@ -178,7 +178,7 @@
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
     if (!note.hidden) closeNote();
-    if (state.expanded && !isNativeFullscreen()) restoreWindow();
+    if (state.expanded || isNativeFullscreen()) restoreWindow();
   });
 
   render();
