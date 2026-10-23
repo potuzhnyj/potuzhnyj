@@ -3,6 +3,14 @@
 </div>
 
 
+## Portfolio
+
+[Visit my portfolio](https://potuzhnyj.is-a.dev/)
+
+A dark desktop-inspired file explorer for browsing my projects by category: UI & Design, Web Apps, Maps & Data, and Automation. The project window opens at 55% of the desktop viewport and supports full screen, folder navigation, and project previews.
+
+The website uses plain HTML, CSS, and JavaScript. Icon attribution is listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 ## Latest project
 
 ### [parcelmap](https://potuzhnyj.github.io/parcelmap/)
