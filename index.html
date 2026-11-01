@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ivan’s personal projects: websites, maps, and small tools.">
+  <meta name="description" content="Ivan’s personal projects and small tools.">
   <title>Ivan — Portfolio</title>
 
   <style>
@@ -88,7 +88,7 @@
       <button type="button" data-category="all" aria-pressed="true">All</button>
       <button type="button" data-category="ui" aria-pressed="false">UI</button>
       <button type="button" data-category="apps" aria-pressed="false">Apps</button>
-      <button type="button" data-category="maps" aria-pressed="false">Maps</button>
+      <button type="button" data-category="api" aria-pressed="false">API</button>
       <button type="button" data-category="tools" aria-pressed="false">Tools</button>
     </nav>
 
@@ -113,7 +113,7 @@
       },
       {
         name: "parcelmap",
-        category: "maps",
+        category: "api",
         description: "Explore cadastral parcels in the Jičín area.",
         live: "https://potuzhnyj.github.io/parcelmap/",
         source: "https://github.com/potuzhnyj/parcelmap"
@@ -130,7 +130,14 @@
         category: "tools",
         description: "Promotional emails turned into a clean report.",
         source: "https://github.com/potuzhnyj/Gmail-Coupon-Grabber"
-      }
+      },
+      {
+        name: "DevFinder",
+        category: "api",
+        description: "Search by username to explore a GitHub profile. ",
+        live: "https://potuzhnyj.github.io/DevFinder/",
+        source: "https://github.com/potuzhnyj/DevFinder/"
+      }    
     ];
 
     const list = document.getElementById("projects");
