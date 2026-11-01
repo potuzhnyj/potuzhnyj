@@ -1,6 +1,6 @@
 # Latest project
 
-## [DevFinder](https://potuzhnyj.github.io/DevFinder/)
+# [DevFinder](https://potuzhnyj.github.io/DevFinder/)
 
 Search for a GitHub username to see the developer’s profile, follower count, and up to five public repositories. Each repository includes its description, primary language, star count, and a link to GitHub.
 
