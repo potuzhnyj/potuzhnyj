@@ -1,14 +1,10 @@
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=potuzhnyj&hide_border=true&theme=transparent" alt="GitHub contribution streak" />
-</div>
-
 # Latest project
 
-## [parcelmap](https://potuzhnyj.github.io/parcelmap/)
+## [DevFinder](https://potuzhnyj.github.io/DevFinder/)
 
-An interactive parcel map for the Jičín area. It uses Leaflet, OpenStreetMap and ČÚZK INSPIRE cadastral data converted from GML to GeoJSON.
+Search for a GitHub username to see the developer’s profile, follower count, and up to five public repositories. Each repository includes its description, primary language, star count, and a link to GitHub.
 
-The project includes parcel selection, highlighted boundaries, cadastral details, zoom-to-parcel behavior and English/Czech translations.
+Built with HTML, CSS, and vanilla JavaScript. Profile and repository data are fetched in parallel from the GitHub REST API using `Promise.all`.
 
 # Tools I use
 
